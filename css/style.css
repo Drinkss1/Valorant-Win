@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html,body{
+    height: 100%;
+}
+
+.clear{
+    clear: both;
+}
+
+section.contatos {
+    width: 100%;
+    height: auto;
+    background-color: #FF4655;
+   /*padding: 0 5%;*/
+   text-align: center;
+}
+
+section.contatos span{
+    font-family: 'Audiowide', cursive;
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+
+
+section.contatos img{
+    border: 1px solid #cccccc;
+    margin-left: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+section.contatos img:hover{
+    background-color: #ff99a2;
+}
+
+.img-logo{
+    position: absolute;
+    top: 15px;
+}
+
+.img-menu{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.menu{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    display: none;
+}
+
+.menu li{
+    padding: 5px;
+}
+
+.menu a{
+    font-family: 'Recursive', sans-serif;
+    color: white;
+    font-size: 18px;
+}
+.menu li:hover{
+    border: 1px solid white;
+    /*background-color:rgba(255, 255, 255, .5);*/
+}
+
+
+/* COMEÇO SILDER */ 
+
+section.slider-container{
+    width: 100%;
+    background-color: #797777;
+    height: auto;
+}
+
+section.slider{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+section.slider img{
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 0;
+}
+
+.bolinhas-navegacao{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+
+}
+
+.bolinhas-navegacao span{
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    background-color: black;
+    cursor: pointer;
+    float: left;
+    margin: 0 20px;
+}
+/* FIM SLIDER */
+
+section.detalhes{
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+section.detalhes h1{
+    color: white;
+    font-size: 35px;
+    font-family: 'Architects Daughter', cursive;
+    text-shadow: 2px 2px red;
+}
+
+.funcionamento{
+    width: 100%;
+    padding: 0 2%;
+}
+
+.funcionamento h1{
+    color: #FF4655;
+    text-decoration: underline;
+}
+
+.funcionamento h3 {
+    color: white;
+    margin-top: 20px;
+}
+.funcionamento p {
+    margin-top: 10px;
+    color: white;
+    border: 2px dashed #ff99a2 ;
+    font-size: 20px;
+    padding: 10px;
+}
+.funcionamento p:hover{
+    background: linear-gradient(to right, #FF4655, #ff99a2  );
+}
+section.eventos{
+    width: 100%;
+    height: 60vh;
+    text-align: center;
+    margin-top: 30px;
+}
+
+section.eventos li{
+    display: inline-block;
+    width: 33.3%;
+    height: 60vh;
+    margin-right: -4px;
+    margin-left: -4px;
+    border: 3px solid white;
+    font-size: 2.2em;
+    color: white;
+    border: 1px solid #cccccc;
+}
+
+section.eventos li{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section.eventos li p {
+    background-color: rgba(255, 255, 255, .5);
+    transition: 1s;
+}
+
+section.eventos li p:hover{
+    height: 100%;
+}
+
+#mainIndex{
+    width: 100%;
+    height: auto;
+    background-image: url(../imagens/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.vazia{
+    width: 100%;
+    height: 100px;
+}
+
+footer{
+    width: 100%;
+    padding: 0 2%;
+    height: auto;
+    background-image: linear-gradient(#4d4d4d, #ff808a);
+}
+
+footer h1{
+    color: white;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    padding-top: 10px;
+}
+
+footer ul {
+    text-align: center;
+    padding-top: 10px;
+}
+
+footer span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+footer img{
+    border: 1px solid #cccccc;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+
+
+}
+
+footer img:hover{
+    background-color: #ff99a2;
+}
+
+
+/*
+Estilo para javascript
+*/
+
+.teste{
+    background-color: darkorange;
+}
+
+

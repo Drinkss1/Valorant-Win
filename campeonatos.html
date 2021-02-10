@@ -1,0 +1,142 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Valorant Win Campeonatos</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="css/styleCampeonato.css">
+            <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <section class="contatos">
+                <span>Valorant Win</span>
+                <a href=""><img src="imagens/instagram.png" alt="instagram">
+                </a>
+        
+                <a href=""><img src="imagens/facebook.png" alt="instagram">
+                </a>
+        
+                <div class="img-logo"><img style="border: 0;" src="imagens/valorant-logo3.png" alt="vava"></div>
+                <div class="img-menu"><img style="border: 0;" src="imagens/menu-aberto.png" alt="vava"></div>
+            </section>
+            <main id="mainCampeonatos">
+                <section class="container">
+                    <h2>Campeonatos Rolando</h2>
+
+                    <label for="filtrarTabela">Filtre:</label>
+                    <input type="text" name="filtro" id="filtrarTabela" placeholder="Digite o nome da organização"></input>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Organização</th>
+                                <th>Valor</th>
+                                <th>Quantidades de Equipes</th>
+                                <th>Requisitos</th>
+                                <th>Premiações</th>
+                                <th>Site para inscrição</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-pacientes">
+                            <tr class="organizacao">
+                                <td class="info-organizacao">LBDC E-sports</td>
+                                <td class="info-valor">40,00</td>
+                                <td class="info-equipes">8</td>
+                                <td class="info-requisitos">A partir do Elo Ouro</td>
+                                <td class="info-premiacao">R$200</td>
+                                <td class="img-localInscricao"><a href="WWW.GOOGLE.COM.BR">LBDC</a></td>
+                            </tr>
+
+                            <tr class="organizacao">
+                                <td class="info-organizacao">Vava Brasil</td>
+                                <td class="info-valor">Gratis</td>
+                                <td class="info-equipes">16</td>
+                                <td class="info-requisitos">Sem Requisitos</td>
+                                <td class="info-premiacao">5 Mouses Pad</td>
+                                <td class="img-localInscricao"><a href="WWW.GOOGLE.COM.BR">Vava Brasil</a></td>
+                            </tr>
+
+                            <tr class="organizacao">
+                                <td class="info-organizacao">League of the horror</td>
+                                <td class="info-valor">5,00</td>
+                                <td class="info-equipes">8</td>
+                                <td class="info-requisitos">A partir do Elo Diamante</td>
+                                <td class="info-premiacao">R$1.000,00</td>
+                                <td class="img-localInscricao"><a href="WWW.GOOGLE.COM.BR">League of the horror</a></td>
+                            </tr>
+
+                            <tr class="organizacao">
+                                <td class="info-organizacao">GTX</td>
+                                <td class="info-valor">40,00</td>
+                                <td class="info-equipes">8</td>
+                                <td class="info-requisitos">A partir do Elo Ouro</td>
+                                <td class="info-premiacao">R$200</td>
+                                <td class="img-localInscricao"><a href="WWW.GOOGLE.COM.BR">GTX</a></td>
+                            </tr>
+
+                            
+                        </tbody>
+                    </table>
+
+                </section>
+            </main>
+
+
+            <section class="container">
+                <h2 id="titulo-form">Adicionar nova organização</h2>
+                <ul id="mensagensErro">
+                    
+                </ul>
+                <form class="form1">
+                    <div class="grupo">
+                        <label for="nome">Organização:</label>
+                        <input required id="nome" name="nome" type="text" placeholder="Digite o nome da sua organização" class="campo">
+                    </div>
+                    <div class="grupo">
+                        <input type="radio"  name="gender" id="radioValor" value="valor" checked>
+                        <label id="radioValor" for="radioValor">Valor</label>
+                        
+                        <input type="radio" id="radioGratis" name="gender" value="gratis">
+                        <label id="radioGratis" for="radioGratis">Grátis</label>
+                        
+                        <input required id="valor" name="valor" type="number" min="1" placeholder="Digite o valor para inscrição" class="campo campo-medio" step="0.01">
+                    </div>
+                    <div class="grupo">
+                        <label for="qtdeEquipes">Quantidades de Equipes:</label>
+                        <input required id="qtdeEquipes" name="qtdeEquipes" type="number" min="4" placeholder="Digite a quantidades de Equipes" class="campo campo-medio">
+                    </div>
+
+                    
+                    <div class="grupo">
+                        <label for="siteInscricao">Site para inscrição:</label>
+                        <input required id="siteInscricao" name="siteInscricao" type="text" placeholder="Digite o site para inscrição" class="campo campo-medio">
+                    </div>
+
+                    <div class="grupo" style="display: block;">
+                        <label for="premiacao">Premiações:</label>
+                        <textarea required name="premiacao" id="premiacao" cols="30" rows="10" class="campo campo-medio"></textarea>
+                    </div>
+
+    
+                    <button id="Adicionar Evento" class="botao bto-principal">Adicionar</button>
+                </form>
+            </section>
+
+
+            <footer>
+                <h1>Valorant Win</h1>
+        
+                <ul>
+                    <a href=""><img src="imagens/instagram.png" alt="instagram"></a>
+                    <a href=""><img src="imagens/facebook.png" alt="instagram"></a>
+                </ul>
+                <span>(c) 2020 Valorant Win</span>
+            </footer>
+
+            <script src="js/filtro.js"></script>
+            
+        </body>
+    </html>
