@@ -40,7 +40,7 @@
                                 <th>Site para inscrição</th>
                             </tr>
                         </thead>
-                        <tbody id="tabela-pacientes">
+                        <tbody id="tabelaOrganizacoes">
                             <tr class="organizacao">
                                 <td class="info-organizacao">LBDC E-sports</td>
                                 <td class="info-valor">40,00</td>
@@ -95,18 +95,31 @@
                         <label for="nome">Organização:</label>
                         <input required id="nome" name="nome" type="text" placeholder="Digite o nome da sua organização" class="campo">
                     </div>
+
                     <div class="grupo">
-                        <input type="radio"  name="gender" id="radioValor" value="valor" checked>
-                        <label id="radioValor" for="radioValor">Valor</label>
+                        <input type="radio"  name="radioValor" class="radio" id="radioValor" value="valor" checked>
+                        <label id="radioValor" class="radio" for="radioValor">Valor</label>
                         
-                        <input type="radio" id="radioGratis" name="gender" value="gratis">
-                        <label id="radioGratis" for="radioGratis">Grátis</label>
+                        <input type="radio" id="radioGratis" class="radio" name="radioValor" value="gratis">
+                        <label id="radioGratis" class="radio" for="radioGratis">Grátis</label>
                         
                         <input required id="valor" name="valor" type="number" min="1" placeholder="Digite o valor para inscrição" class="campo campo-medio" step="0.01">
                     </div>
+
                     <div class="grupo">
                         <label for="qtdeEquipes">Quantidades de Equipes:</label>
                         <input required id="qtdeEquipes" name="qtdeEquipes" type="number" min="4" placeholder="Digite a quantidades de Equipes" class="campo campo-medio">
+                    </div>
+
+                    <div class="grupo">
+                        <input type="radio"  name="radioRequisitos" class="radio" id="radioRequisitos" value="radioRequisitos" checked>
+                        <label for="radioRequisitos" class="radio">Requisitos:</label>
+
+                        <input type="radio"  name="radioRequisitos" class="radio" id="radioSemRequisitos" value="radioSemRequisitos">
+                        <label for="radioSemRequisitos" class="radio" id="radioSemRequisitos">Sem requisitos:</label>
+
+                        
+                        <input required id="requisitos" name="requisitos" type="text" placeholder="Digite os requisitos" class="campo campo-medio">
                     </div>
 
                     
@@ -121,7 +134,7 @@
                     </div>
 
     
-                    <button id="Adicionar Evento" class="botao bto-principal">Adicionar</button>
+                    <button id="adicionarEvento" class="botao bto-principal">Adicionar</button>
                 </form>
             </section>
 
@@ -137,6 +150,8 @@
             </footer>
 
             <script src="js/filtro.js"></script>
+            <script src="js/incluirEventoTabela.js"></script>
+            <script src="js/manipulacaoRadioHtml.js"></script>
             
         </body>
     </html>

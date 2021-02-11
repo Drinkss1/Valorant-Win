@@ -26,23 +26,3 @@ campoFiltro.addEventListener("input",function(){
     }
 });
 
-var radioGratis = document.querySelector("#radioGratis");
-var radioValor = document.querySelector("#radioValor");
-var inputValor = document.querySelector("#valor");
-
-
-radioGratis.addEventListener("click",function(){
-    inputValor.setAttribute("type","text");
-    inputValor.value = 'Grátis';
-    inputValor.disabled = true;
-    
-});
-
-radioValor.addEventListener("click", function(){
-    inputValor.setAttribute("type","number");
-    inputValor.value = "";
-    inputValor.disabled = false;
-});
-
-
-
