@@ -5,19 +5,21 @@ botaoAdicionar.addEventListener("click",function(event){
     
     var form = document.querySelector("form");//Selecionando o form quando fomos pegar os input só é necessário colocar o name
     var organizacao = ObtemInformacoesForm(form);
-    /*var erros = ValidaPaciente(organizacao);
+
+    console.log(organizacao.dataFimInscricao);
+    var erros = ValidaInscricao(organizacao);
 
     if(erros.length > 0){
         exibeMensagensDeErro(erros);
         return;
-    }*/
+    }
 
     AdicionaOrganizacaoNaTabela(organizacao);
     form.reset();
 
-    /*var mensagensErro = document.querySelector("#mensagensErro");
+    var mensagensErro = document.querySelector("#mensagensErro");
     mensagensErro.innerHTML = "";
-    backgroundExcluir();
+    /*backgroundExcluir();
     ExcluirPaciente();*/
 
 });
@@ -37,7 +39,8 @@ function ObtemInformacoesForm(form){
         qtdeEquipes: form.qtdeEquipes.value,
         requisitos: form.requisitos.value,
         premiacao: form.premiacao.value,
-        siteInscricao: form.siteInscricao.value
+        siteInscricao: form.siteInscricao.value,
+        dataFimInscricao: form.dataFimInscricao.value
     }
     return organizacao;
 }
@@ -46,11 +49,8 @@ function MontaTr(organizacao){
 
         var organizacaoTr = document.createElement("tr");
         organizacaoTr.classList.add("organizacao");
-        var montatdSite = MontaTd(organizacao.nome, "img-localInscricao");
-        montatdSite.setAttribute("a", organizacao.siteInscricao);
-        montatdSite.setAttribute("href",organizacao.siteInscricao);
         
-        organizacaoTr.appendChild(MontaTd(organizacao.nome, "info-nome"));
+        organizacaoTr.appendChild(MontaTd(organizacao.nome, "info-organizacao"));
         organizacaoTr.appendChild(MontaTd(organizacao.valor, "info-valor"));
         organizacaoTr.appendChild(MontaTd(organizacao.qtdeEquipes, "info-equipes"));
         organizacaoTr.appendChild(MontaTd(organizacao.requisitos, "info-requisitos"));
@@ -69,32 +69,42 @@ function MontaTd(informacao, classe){
 }
 
 
-function ValidaPaciente(paciente){
+function ValidaInscricao(organizacao){
 
     var erros = [];
 
-    if(paciente.nome.length == 0){
-        erros.push("O campo Nome não pode ser em branco.");
+    if(organizacao.nome.length == 0){
+        erros.push("O campo 'Nome' não pode ser em branco.");
     }
 
-    if(!ValidaPeso(paciente.peso)){
-        erros.push("Peso é inválido.");
+    if(organizacao.valor.length == 0){
+        var nomeCampoVazio = document.createElement("a","Valor");
+        nomeCampoVazio.classList.add("nomeCampoVazio");
+        erros.push("O campo ' Valor ' não pode ser em branco.");
     }
 
-    if(!ValidaAltura(paciente.altura)){
-        erros.push("Altura é inválido.");
+    if(organizacao.qtdeEquipes.length == 0){
+        erros.push("O campo ' Quantidades de Equipes ' não pode ser em branco.");
     }
 
-    if(paciente.gordura.length == 0){
-        erros.push("O campo Gordura não pode ser em branco.");
+    if(organizacao.requisitos.length == 0){
+        erros.push("O campo ' Requisitos ' não pode ser em branco.");
     }
 
-    if(paciente.peso.length == 0){
-        erros.push("O campo Peso não pode ser em branco.");
+    if(organizacao.siteInscricao.length == 0){
+        erros.push("O campo ' Site para inscrição ' não pode ser em branco.");
     }
 
-    if(paciente.altura.length == 0){
-        erros.push("O campo Altura não pode ser em branco.");
+    if(organizacao.premiacao.length == 0){
+        erros.push("O campo ' Premiações ' não pode ser em branco.");
+    }
+
+    if(organizacao.qtdeEquipes % 2 != 0){
+        erros.push("Apenas números pares são aceitos para definir as quantidades de equipes.");
+    }
+
+    if(organizacao.dataFimInscricao.length == 0){
+        erros.push("O campo ' Data fim inscrição ' não pode ser em branco.")
     }
 
     return erros;
@@ -115,11 +125,16 @@ function exibeMensagensDeErro(erros){
 
 function criaColunaSite(infoSite){
     
+
+
+
     var tagA = document.createElement("a");
     tagA.setAttribute("href", infoSite.siteInscricao);
 
-    tagA.textContent = infoSite.nome;
+    var imgSite = document.createElement("img");
+    imgSite.src = "../imagens/imgSite.png";
 
+    tagA.appendChild(imgSite);
 
     var td = document.createElement("td");
     td.classList.add("localInscricao");
@@ -128,3 +143,4 @@ function criaColunaSite(infoSite){
 
     return td;
 }
+

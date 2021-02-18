@@ -1,3 +1,4 @@
+
 var campoFiltro = document.querySelector("#filtrarTabela");
 
 campoFiltro.addEventListener("input",function(){
@@ -16,7 +17,7 @@ campoFiltro.addEventListener("input",function(){
             else{
                 organizacao.classList.remove("invisivel");
             }
-            
+                
         });
     }
     else{

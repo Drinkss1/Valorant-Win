@@ -114,15 +114,16 @@ button[disabled=disabled], button:disabled {
 	border-color: darkgray;
 
 }
-/*
-#radioGratis{
-	display: inline-block;
-}
-
-#radioValor{
-	display: inline-block;
-}*/
 
 .radio{
 	display: inline-block;
+}
+
+#mensagensErro{
+	color: rgba(255, 0, 0,.5);
+}
+
+.mensagensErro{
+	list-style: none;
+	font-family: 'Audiowide', cursive;
 }

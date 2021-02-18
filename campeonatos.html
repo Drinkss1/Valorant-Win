@@ -40,45 +40,9 @@
                                 <th>Site para inscrição</th>
                             </tr>
                         </thead>
-                        <tbody id="tabelaOrganizacoes">
-                            <tr class="organizacao">
-                                <td class="info-organizacao">LBDC E-sports</td>
-                                <td class="info-valor">40,00</td>
-                                <td class="info-equipes">8</td>
-                                <td class="info-requisitos">A partir do Elo Ouro</td>
-                                <td class="info-premiacao">R$200</td>
-                                <td class="img-localInscricao"><a href="WWW.GOOGLE.COM.BR">LBDC</a></td>
-                            </tr>
 
-                            <tr class="organizacao">
-                                <td class="info-organizacao">Vava Brasil</td>
-                                <td class="info-valor">Gratis</td>
-                                <td class="info-equipes">16</td>
-                                <td class="info-requisitos">Sem Requisitos</td>
-                                <td class="info-premiacao">5 Mouses Pad</td>
-                                <td class="img-localInscricao"><a href="WWW.GOOGLE.COM.BR">Vava Brasil</a></td>
-                            </tr>
+                        <tbody id="tabelaOrganizacoes"></tbody>
 
-                            <tr class="organizacao">
-                                <td class="info-organizacao">League of the horror</td>
-                                <td class="info-valor">5,00</td>
-                                <td class="info-equipes">8</td>
-                                <td class="info-requisitos">A partir do Elo Diamante</td>
-                                <td class="info-premiacao">R$1.000,00</td>
-                                <td class="img-localInscricao"><a href="WWW.GOOGLE.COM.BR">League of the horror</a></td>
-                            </tr>
-
-                            <tr class="organizacao">
-                                <td class="info-organizacao">GTX</td>
-                                <td class="info-valor">40,00</td>
-                                <td class="info-equipes">8</td>
-                                <td class="info-requisitos">A partir do Elo Ouro</td>
-                                <td class="info-premiacao">R$200</td>
-                                <td class="img-localInscricao"><a href="WWW.GOOGLE.COM.BR">GTX</a></td>
-                            </tr>
-
-                            
-                        </tbody>
                     </table>
 
                 </section>
@@ -86,7 +50,7 @@
 
 
             <section class="container">
-                <h2 id="titulo-form">Adicionar nova organização</h2>
+                <h2 id="titulo-form">Adicionar novo campeonato</h2>
                 <ul id="mensagensErro">
                     
                 </ul>
@@ -128,7 +92,12 @@
                         <input required id="siteInscricao" name="siteInscricao" type="text" placeholder="Digite o site para inscrição" class="campo campo-medio">
                     </div>
 
-                    <div class="grupo" style="display: block;">
+                    <div class="grupo">
+                        <label for="dataFimInscricao">Data fim inscrição:</label>
+                        <input required id="dataFimInscricao" name="dataFimInscricao" type="date" placeholder="Digite a data do fim da inscrição" class="campo campo-medio">
+                    </div>
+
+                    <div class="grupo">
                         <label for="premiacao">Premiações:</label>
                         <textarea required name="premiacao" id="premiacao" cols="30" rows="10" class="campo campo-medio"></textarea>
                     </div>
