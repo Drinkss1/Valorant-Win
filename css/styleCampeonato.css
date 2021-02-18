@@ -127,3 +127,9 @@ button[disabled=disabled], button:disabled {
 	list-style: none;
 	font-family: 'Audiowide', cursive;
 }
+
+@media screen and (max-width: 859px){
+	.grupo{
+		width: 100%;
+	}
+}

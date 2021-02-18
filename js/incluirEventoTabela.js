@@ -19,9 +19,6 @@ botaoAdicionar.addEventListener("click",function(event){
 
     var mensagensErro = document.querySelector("#mensagensErro");
     mensagensErro.innerHTML = "";
-    /*backgroundExcluir();
-    ExcluirPaciente();*/
-
 });
 
 function AdicionaOrganizacaoNaTabela(organizacao){
