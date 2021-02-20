@@ -1,9 +1,10 @@
-
 var campoFiltro = document.querySelector("#filtrarTabela");
+
+
+
 
 campoFiltro.addEventListener("input",function(){
     var organizacoes = document.querySelectorAll(".organizacao");
-
     if(campoFiltro.value.length > 0){
         organizacoes.forEach(function(organizacao){
 

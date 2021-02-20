@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recrutamento Valorant Win</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/styleRecrutamento.css">
+        <link rel="stylesheet" href="css/styleCampeonato.css">
+        <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <section class="contatos">
+            <span>Valorant Win</span>
+            <a href=""><img src="imagens/instagram.png" alt="instagram">
+            </a>
+    
+            <a href=""><img src="imagens/facebook.png" alt="instagram">
+            </a>
+    
+            <div class="img-logo"><img style="border: 0;" src="imagens/valorant-logo3.png" alt="vava"></div>
+            <div class="img-menu"><img style="border: 0;" src="imagens/menu-aberto.png" alt="vava"></div>
+        </section>
+
+        <section class="menu">
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="campeonatos.html"><li>Campeonatos</li></a>
+                <a href="recrutamento.html"><li style="background-color: #ccc;">Recrutamento</li></a>
+            </ul>
+        </section>
+
+            <main id="mainRecrutamentos">
+                <section class="container">
+                    <h2>Times contratando</h2>
+
+                    <label for="filtrarTabela">Filtre:</label>
+                    <input type="text" name="filtro" id="filtrarTabela" placeholder="Digite o nome do time"></input>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Quantidades de vagas</th>
+                                <th>Requisitos</th>
+                                <th>Local de recrutamento</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tabelaTimes"></tbody>
+
+                    </table>
+                </section>
+
+                <section class="container">
+                    <h2 id="titulo-form">Adicionar novo recrutamento</h2>
+                    <ul id="mensagensErro">
+                        
+                    </ul>
+                    <form class="form2">
+                        <div class="grupo">
+                            <label for="nome">Time:</label>
+                            <input required id="nome" name="nome" type="text" placeholder="Digite o nome do seu time" class="campo">
+                        </div>
+    
+                        <div class="grupo">
+                            <label for="qtdeEquipes">Quantidades de vagas:</label>
+                            <input required id="qtdeVagas" name="qtdeVagas" type="number" min="1" placeholder="Digite a quantidades de vagas" class="campo campo-medio">
+                        </div>
+    
+                        <div class="grupo">
+                            <input type="radio"  name="radioRequisitos" class="radio" id="radioRequisitos" value="radioRequisitos" checked>
+                            <label for="radioRequisitos" class="radio">Requisitos:</label>
+    
+                            <input type="radio"  name="radioRequisitos" class="radio" id="radioSemRequisitos" value="radioSemRequisitos">
+                            <label for="radioSemRequisitos" class="radio" id="radioSemRequisitos">Sem requisitos:</label>
+    
+                            
+                            <input required id="requisitos" name="requisitos" type="text" placeholder="Digite os requisitos" class="campo campo-medio">
+                        </div>
+    
+                        
+                        <div class="grupo">
+                            <label for="localRecrutamento">Local de recrutamento:</label>
+                            <input required id="localRecrutamento" name="localRecrutamento" type="text" placeholder="Digite o local de recrutamento" class="campo campo-medio">
+                        </div>
+
+                        <div class="grupo">
+                            <label for="dataFimInscricao">Data fim inscrição:</label>
+                            <input required id="dataFimInscricao" name="dataFimInscricao" type="date" placeholder="Digite a data do fim da inscrição" class="campo campo-medio">
+                        </div>
+                        
+                        <button id="adicionarEvento" class="botao bto-principal">Adicionar</button>
+                    </form>
+                </section>
+            </main>
+
+
+
+            <footer>
+                <h1>Valorant Win</h1>
+        
+                <ul>
+                    <a href=""><img src="imagens/instagram.png" alt="instagram"></a>
+                    <a href=""><img src="imagens/facebook.png" alt="instagram"></a>
+                </ul>
+                <span>(c) 2020 Valorant Win</span>
+            </footer>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="js/menuNavegacao.js"></script>
+        <script src="js/filtroRecrutamento.js"></script>
+        <script src="js/manipulacaoRadioHtml.js"></script>
+        <script src="js/incluirRecrutamentoTabela.js"></script>
+    </body>
+</html>
